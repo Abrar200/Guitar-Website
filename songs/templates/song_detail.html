@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <article class="media content-section">
+    <div class="media-body">
+      <div class="article-metadata">
+        <a class="mr-2" href="{% url 'author-songs' object.author %}">{{ object.author }}</a>
+      </div>
+      <h2 class="article-title">{{ object.title }}</h2>
+      <p class="article-content"><pre>{{ object.lyrics }}</pre></p>
+    </div>
+  </article>
+{% endblock content %}
